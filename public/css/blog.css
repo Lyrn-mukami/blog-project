@@ -1,0 +1,51 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    height: 100%; 
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+   }
+.logo{
+    font-size: 30px;
+    font-style:oblique;
+    margin: 10px;
+    position: static;
+}
+.create-blog {
+    margin: 10px;
+    position: static;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+
+.posts{
+    position: relative;
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(233, 233, 233);
+    margin-left: auto;
+    margin-right: auto;
+}
+.card #buttons{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.card #buttons button{
+    margin:10px;
+}
+.card #content {
+    text-align: center;
+    padding: 10px;
+}
+.card h2{
+    margin:0px;
+}
+/* .card #content p{
+    margin-top: 30px;
+} */
