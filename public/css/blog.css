@@ -2,6 +2,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 500;
     text-decoration: none;
+    font-size: 18px;
 }
 html,body{
     width: 100%;
@@ -10,10 +11,19 @@ html,body{
     padding: 0px;
     overflow-x: hidden;
    }
-.logo{
-    font-size: 30px;
+.logo h1{
+    font-size: 34px;
     font-style:oblique;
-    margin: 10px;
+    margin:10px 10px 0px;
+    position: static;
+    background: linear-gradient(to right, #ea190a 0%, #f54e07 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo h4{
+    font-size: 12px;
+    font-style:oblique;
+    margin: 0px 10px 10px;
     position: static;
 }
 .create-blog {
@@ -23,21 +33,49 @@ html,body{
     flex-direction: row-reverse;
     margin-bottom: 20px;
 }
+.create-blog a{
+    color: blue;
+}
 
-.posts{
+.posts, .warning{
     position: relative;
     width: 50%;
     border-radius: 5px;
     background-color: rgb(233, 233, 233);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
+}
+.warning .warning_title{
+    background-color: red;
+    color:antiquewhite;
+}
+.warning .warning_content{
+    background-color:rgb(248, 223, 189) ;
+    color:rgb(148, 8, 8);
 }
 .card #buttons{
     display: flex;
     flex-direction: row-reverse;
+    grid-auto-rows: auto auto;
 }
-.card #buttons button{
+.card #buttons a{
     margin:10px;
+    color: blue;
+    margin-top: 22px;
+}
+#buttons form{
+    margin:5px;
+    width:20%;
+    padding-right: 15px;
+    padding-left: 0px;
+}
+#buttons form button{
+    margin:0px;
+    padding:0px;
+    float: right;
+    width: 30%;
+    
 }
 .card #content {
     text-align: center;
@@ -45,7 +83,45 @@ html,body{
 }
 .card h2{
     margin:0px;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
 }
-/* .card #content p{
+.card #content p{
     margin-top: 30px;
-} */
+    justify-content: left;
+} 
+        /* BEGIN:CREATE & UPDATE BLOG CSS  */
+form{
+    position: relative;
+    width: 40%;
+    border-radius: 5px;
+    background-color: rgb(233, 233, 233);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+label ,input, button, textarea, h3{
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+margin-left: auto;
+margin-right: auto;
+}
+input, label, textarea,h3{
+    width:50%
+}
+form h3{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+}
+button{
+padding: 5px;
+background-color: blue;
+color: antiquewhite;
+border-color: transparent;
+}

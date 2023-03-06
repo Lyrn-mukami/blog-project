@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
+Route::get('/blogs',[BlogController::class, 'index']);
 
+Route::get('/blogs/create', [BlogController::class, 'create']); 
+
+Route::post('/blogs/save', [BlogController::class, 'store']);
+
+Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
+
+Route::patch('/{id}', [BlogController::class, 'update'])->name('blog.update');
+
+Route::delete('/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
